@@ -47,7 +47,7 @@ def cli():
     print('date'+date)
 
     # 构建url
-    url = 'https://kyfw.12306.cn/otn/lcxxcx/query?purpost_codes=ADULT&queryDate={}&from_station={}&to_station={}'.format(
+    url = 'https://kyfw.12306.cn/otn/leftTicket/query?purpose_codes=ADULT&leftTicket.train_date={}&leftTicketDTO.from_station={}&leftTicketDTO.to_station={}'.format(
         date, from_station, to_station
     )
 
@@ -56,7 +56,7 @@ def cli():
 
     print(r)
 
-    print(r.json())
+    print(r.json()['data'])
 
 
 if __name__ == '__main__' :
