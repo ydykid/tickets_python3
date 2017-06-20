@@ -41,6 +41,10 @@ def cli():
 
     date = arguments['<date>']
 
+    print('from_station'+from_station)
+    print('to_station'+to_station)
+    print('date'+date)
+
     # 构建url
     url = 'https://kyfw.12306.cn/otn/lcxxcx/query?purpost_codes=ADULT&queryDate={}&from_station={}&to_station={}'.format(
         date, from_station, to_station
