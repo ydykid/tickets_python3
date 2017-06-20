@@ -3,7 +3,7 @@ import re
 
 import requests
 
-from docopt import docopt
+from pprint import pprint
 
 url = 'https://kyfw.12306.cn/otn/resources/js/framework/station_name.js?station_version=1.8971'
 
