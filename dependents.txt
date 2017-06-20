@@ -1,0 +1,7 @@
+python3:
+requests
+prettytable
+docopt
+colorama
+
+sudo pip3 install requests prettytable docopt colorama
