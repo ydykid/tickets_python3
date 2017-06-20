@@ -28,11 +28,28 @@ import requests
 
 from docopt import docopt
 
+from stations import stations
+
 
 def cli():
     """command-line interface"""
     arguments = docopt(__doc__)
-    print(arguments)
+    # print(arguments)
+    from_station = stations.get(arguments['<from>'])
 
+    to_station = stations.get(arguments['<to>'])
+
+    date = arguments['<date>']
+
+    # 构建url
+    url = 'https://kyfw.12306.cn/otn/lcxxcx/query?purpost_codes=ADULT&queryDate={}&from_station={}&to_station={}'.format(
+        date, from_station， to_station
+    )
+
+    # 添加verify=False参数不验证证书
+    r = requests.get(url, verify=False)
+    print(r.json())
+
+    
 if __name__ == '__main__' :
     cli()
