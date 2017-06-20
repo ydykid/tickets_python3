@@ -25,7 +25,7 @@ stations = re.findall(u'([\u4e00-\u9fa5]+)\|([A-Z]+)', response.text)
 # pprint(dict(stations), indent=4)
 
 f = open('stations.py','w+',encoding='utf-8')
-f.write('# coding: utf-8\n{\n')
+f.write('# coding: utf-8\nstations = {\n')
 for s in stations :
     f.write("    '"+s[0]+"':'"+s[1]+"',\n")
 f.write('}')

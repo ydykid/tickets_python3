@@ -1,5 +1,5 @@
 # coding: utf-8
-{
+stations = {
     '北京北':'VAP',
     '北京东':'BOP',
     '北京':'BJP',
