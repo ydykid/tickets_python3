@@ -22,6 +22,10 @@ Example:
 
 """
 
+import re
+
+import requests
+
 from docopt import docopt
 
 
