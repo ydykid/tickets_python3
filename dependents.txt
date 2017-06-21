@@ -25,7 +25,7 @@ pip install virtualenvwrapper
 
 # 启动virtualenvwrapper
 export WORKON_HOME='~/.virtualenvs'
-souce /usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # 将以上两条命令加到.bash_profile中，终端自动启动virtualenvwrapper
 source ~/.bash_profile
