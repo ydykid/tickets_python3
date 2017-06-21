@@ -5,3 +5,49 @@ docopt
 colorama
 
 sudo pip3 install requests prettytable docopt colorama
+
+mac python3, use homebrew:
+
+# 查看使用brew安装的包
+brew list
+
+# brew搜索所有的python包，并显示安装状态
+brew search python
+
+# 使用brew安装python、python3
+brew install python python3
+
+# 使用pip安装virtualenv
+pip install virtualenv
+
+# 使用pip安装virtualenvwrapper
+pip install virtualenvwrapper
+
+# 启动virtualenvwrapper
+export WORKON_HOME='~/.virtualenvs'
+souce /usr/local/bin/virtualenvwrapper.sh
+
+# 将以上两条命令加到.bash_profile中，终端自动启动virtualenvwrapper
+source ~/.bash_profile
+
+# 显示virtualenvwrapper帮助信息
+virtualenvwrapper --help
+
+# 创建python环境
+mkvirtualenv [name]
+  # 创建python3环境
+  mkvirtualenv -p python3 py3env
+  # 创建python2环境
+  mkvirtualenv -p python py2env
+
+# 删除python环境
+rmvirtualenv [name]
+
+# 激活python环境
+workon [name]
+
+# 退出当前环境
+deactivate
+
+# 列出所有环境
+workon | lsvirtualenv -b
