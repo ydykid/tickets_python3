@@ -47,16 +47,24 @@ def cli():
     print('date'+date)
 
     # 构建url
-    url = 'https://kyfw.12306.cn/otn/leftTicket/query?purpose_codes=ADULT&leftTicket.train_date={}&leftTicketDTO.from_station={}&leftTicketDTO.to_station={}'.format(
+    url_query = 'https://kyfw.12306.cn/otn/leftTicket/query?purpose_codes=ADULT&leftTicket.train_date={}&leftTicketDTO.from_station={}&leftTicketDTO.to_station={}'.format(
         date, from_station, to_station
     )
-
+    url_log = 'https://kyfw.12306.cn/otn/leftTicket/query?purpose_codes=ADULT&leftTicket.train_date={}&leftTicketDTO.from_station={}&leftTicketDTO.to_station={}'.format(
+        date, from_station, to_station
+    )
     # 添加verify=False参数不验证证书
-    r = requests.get(url, verify=False)
+    # r = requests.get(url_log, verify=False)
+    # r = requests.get(url_log)
+    r = requests.get(url_query, verify=False)
 
     print(r)
 
-    print(r.json()['data'])
+    print(r.url)
+
+    print(r.text)
+
+    # print(r.json()['data'])
 
 
 if __name__ == '__main__' :
