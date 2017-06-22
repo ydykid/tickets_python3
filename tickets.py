@@ -47,10 +47,10 @@ def cli():
     print('date'+date)
 
     # 构建url
-    url_query = 'https://kyfw.12306.cn/otn/leftTicket/query?purpose_codes=ADULT&leftTicket.train_date={}&leftTicketDTO.from_station={}&leftTicketDTO.to_station={}'.format(
+    url_query = 'https://kyfw.12306.cn/otn/leftTicket/query?leftTicketDTO.train_date={}&leftTicketDTO.from_station={}&leftTicketDTO.to_station={}&purpose_codes=ADULT'.format(
         date, from_station, to_station
     )
-    url_log = 'https://kyfw.12306.cn/otn/leftTicket/query?purpose_codes=ADULT&leftTicket.train_date={}&leftTicketDTO.from_station={}&leftTicketDTO.to_station={}'.format(
+    url_log = 'https://kyfw.12306.cn/otn/leftTicket/log?purpose_codes=ADULT&leftTicketDTO.train_date={}&leftTicketDTO.from_station={}&leftTicketDTO.to_station={}'.format(
         date, from_station, to_station
     )
     # 添加verify=False参数不验证证书
