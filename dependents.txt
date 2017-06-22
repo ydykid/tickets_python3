@@ -51,3 +51,6 @@ deactivate
 
 # 列出所有环境
 workon | lsvirtualenv -b
+
+# mac 下删除目录下所有.pyc文件
+find . -name *.pyc -print0 | xargs -0 git rm -f --ignore-unmatch

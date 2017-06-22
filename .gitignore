@@ -1,2 +1,4 @@
 *.pyc
 python3
+
+*.DS_Store
