@@ -1,0 +1,2 @@
+cd ~/Projects/tickets_python3
+python tickets.py 南阳 新乡 2017-06-25
