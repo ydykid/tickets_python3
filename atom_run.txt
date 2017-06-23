@@ -1,2 +1,5 @@
 cd ~/Projects/tickets_python3
 python tickets.py 南阳 新乡 2017-06-25
+python tickets.py 南阳 西安 2017-06-25
+python tickets.py 西安 南阳 2017-06-25
+python tickets.py 西安 北京 2017-06-25
